@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Inserimento corso</title>
+</head>
+<body>
+	
+	<h1>Inserimento Nuovo Corso</h1>
+	<form action="#" method="post" th:object="${corsodilaurea}" th:action="@{/post-inseriscicorso}">
+
+    Inserisci Codice Corso:
+    <input type="text" th:field="*{codice}"><br>
+
+    Inserisci Nome Corso:
+    <input type="text" th:field="*{nomeCorso}"><br>
+
+    Inserisci Indirizzo Corso:
+    <input type="text" th:field="*{indirizzo}"><br>
+
+    Inserisci Numero Esami:
+    <input type="text" th:field="*{numeroDiEsami}"><br>
+
+  
+  
+    <input type="submit" value="Inserire Corso">
+    
+    
+    <a href="index"><p align ="center">Torna alla Home</p></a>
+
+</body>
+</html>

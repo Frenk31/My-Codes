@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Modifica dello Studente</title>
+</head>
+<body>
+
+	<h1>Modifica Studente</h1>
+
+	<form action="#" method="get" th:object="${studente}"  th:action="@{/put-modificastudente}">
+
+  	 Matricola Studente:
+    <input type="text" th:field="*{matricola}" readonly="readonly"><br>
+
+   	 Inserisci nome Studente:
+    <input type="text" th:field="*{nome}" ><br>
+
+   	 Inserisci cognome Studente:
+    <input type="text" th:field="*{cognome}" ><br>
+
+   	 Inserisci Data di nascita dello Studente:
+    <input type="date" th:field="*{dataDiNascita}"><br>
+
+   	 Inserisci citta di residenza Studente:
+    <input type="text" th:field="*{cittaDiResidenza}" ><br> 
+    
+     Inserisci l'email Studente:
+    <input type="email" th:field="*{email}" ><br> 
+    
+   	 Inserisci l'indirizzo Studente:
+    <input type="text" th:field="*{indirizzo}" ><br> 
+    
+  	 Scegli Corso 
+  	 <select th:field="*{corso}">
+     <option th:each="c:${elencoCorso}" th:text="${c.nomeCorso}" th:value ="${c.codice}"></option></select> <br> 
+               
+	
+    <input type="submit" value="modifica studente">
+
+	
+
+</body>
+</html>

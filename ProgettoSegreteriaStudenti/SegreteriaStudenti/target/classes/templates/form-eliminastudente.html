@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Eliminazione studente</title>
+</head>
+<body>
+	
+	<h1>Sicuro di voler eleminare tale Studente ?</h1>
+	<form action="#" method="get" th:object="${studente}" th:action="@{/delete-eliminastudente}">
+    <input type="text" th:field="*{matricola}" readonly="readonly"><br>
+    
+    <input type="submit" value="Elimina studente">
+
+
+</body>
+</html>
